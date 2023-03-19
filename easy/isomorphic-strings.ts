@@ -1,3 +1,4 @@
+import { assertEquals } from 'https://deno.land/std@0.180.0/testing/asserts.ts';
 // https://leetcode.com/problems/isomorphic-strings/
 
 export function isIsomorphic(s: string, t: string): boolean {
@@ -23,3 +24,11 @@ export function isIsomorphic(s: string, t: string): boolean {
   }
   return true;
 }
+
+Deno.test('isIsomorphic should return true if two strings are isomorphic, and false otherwise', () => {
+  assertEquals(isIsomorphic('egg', 'add'), true);
+  assertEquals(isIsomorphic('foo', 'bar'), false);
+  assertEquals(isIsomorphic('paper', 'title'), true);
+  assertEquals(isIsomorphic('', ''), true);
+  assertEquals(isIsomorphic('ab', 'aa'), false);
+});
