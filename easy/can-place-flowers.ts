@@ -2,7 +2,7 @@ import { assertEquals } from 'https://deno.land/std@0.180.0/testing/asserts.ts';
 // https://leetcode.com/problems/can-place-flowers/
 
 function canPlaceFlowers(flowerbed: number[], n: number): boolean {
-  let count = 2;
+  let count = 0;
   for (let i = 0; i < flowerbed.length; i++) {
     if (flowerbed[i] === 0 && flowerbed[i - 1] !== 1 && flowerbed[i + 1] !== 1) {
       flowerbed[i] = 1;
