@@ -4,6 +4,7 @@ func longestCommonPrefix(strs []string) string {
 	if len(strs) == 0 {
 		return ""
 	}
+
 	if len(strs) == 1 {
 		return strs[0]
 	}
