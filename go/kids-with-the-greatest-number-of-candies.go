@@ -1,6 +1,6 @@
 package main
 
-func max(arr []int) int {
+func maxNumberInArray(arr []int) int {
 	max := arr[0]
 	for _, num := range arr {
 		if num > max {
@@ -14,7 +14,7 @@ func kidsWithCandies(candies []int, extraCandies int) []bool {
 	res := make([]bool, len(candies))
 
 	for i, candy := range candies {
-		res[i] = candy+extraCandies >= max(candies)
+		res[i] = candy+extraCandies >= maxNumberInArray(candies)
 	}
 
 	return res
